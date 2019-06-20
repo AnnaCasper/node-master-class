@@ -82,19 +82,6 @@ var unifiedServer = function(req,res){
   });
 };
 
-// Define all the handlers
-var handlers = {};
-
-// Ping handler
-handlers.hello = function(data,callback){
-    callback(200,{'hello':'hello world!'});
-};
-
-// Not-Found handler
-handlers.notFound = function(data,callback){
-  callback(404);
-};
-
 // Define the request router
 var router = {
   'hello' : handlers.hello
